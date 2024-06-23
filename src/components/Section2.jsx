@@ -2,11 +2,20 @@ import React from "react";
 import ProjectCard from "./ProjectCard";
 import { FaAngleLeft } from "react-icons/fa6";
 
-function Section2() {
+function Section2({ index }) {
+  const colorArr = [
+    "#89f480",
+    "#c0b623",
+    "#e36211cd",
+    "#1cbcb9",
+    "#7116d8",
+    "#bb1e84",
+    "#a21f1f",
+  ];
   return (
     <div className=" w-full flex items-center flex-col gap-[1rem] py-[2rem]">
       <h4 className="text-[70px] text-white tracking-[-5px] monospace">
-        Projects <span className="text-[#89f480]">highlight</span>
+        Projects <span style={{ color: colorArr[index] }}>highlight</span>
       </h4>
       <ProjectCard />
       <ProjectCard />

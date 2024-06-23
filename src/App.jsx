@@ -7,7 +7,8 @@ import Home from "./components/Home";
 import LocomotiveScroll from "locomotive-scroll";
 
 function App() {
-  const [progress, setProgress] = useState(100);
+  const [progress, setProgress] = useState(0);
+  const [index, setindex] = useState(0);
   const locomotiveScroll = new LocomotiveScroll();
   useEffect(() => {
     const interval = setInterval(() => {
@@ -69,14 +70,14 @@ function App() {
     <div className="bg-[#0F0E0E]  w-full mainContainer opacity-0">
       <div className="w-screen h-screen fixed top-0 left-0 pointer-events-none">
         <span className="circle1 absolute top-[15%] left-[34%]">
-          <CircleOverlay />
+          <CircleOverlay index={index} />
         </span>
         <span className="circle2 absolute top-[50%] left-[134%]">
-          <CircleOverlay />
+          <CircleOverlay index={index} />
         </span>
       </div>
       <Loader progress={progress} />
-      <Home />
+      <Home setindex={setindex} index={index}/>
     </div>
   );
 }

@@ -1,7 +1,16 @@
 import gsap from "gsap";
 import React, { useEffect, useRef } from "react";
 import { IoIosArrowDown } from "react-icons/io";
-function Section1() {
+function Section1({ index }) {
+  const colorArr = [
+    "#89f480",
+    "#c0b623",
+    "#e36211cd",
+    "#1cbcb9",
+    "#7116d8",
+    "#bb1e84",
+    "#a21f1f",
+  ];
   return (
     <div className=" h-screen w-full flex items-center justify-center flex-col gap-5 select-none ">
       <div className=" w-full h-[900px] absolute overflow-hidden flex  z-[1] top-[-20%]">
@@ -19,7 +28,7 @@ function Section1() {
       <div className="flex items-center justify-center flex-col gap-5 z-[2]">
         <h2 className="text-[100px] text-white leading-[5.5rem] text-center monospace">
           Hi,i'm Subhajit,a <br />
-          <span className="text-[#89f480]">frontend</span> developer
+          <span style={{color:colorArr[index]}}>frontend</span> developer
         </h2>
         <p className="text-[#727272]">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum

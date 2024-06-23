@@ -10,7 +10,7 @@ import { GoMail } from "react-icons/go";
 import { MdAutorenew } from "react-icons/md";
 import gsap from "gsap";
 
-function Overlay() {
+function Overlay({ setindex, index }) {
   const spinRef = useRef(null);
   const [isAnimating, setIsAnimating] = useState(false);
   function handelSpin() {
@@ -23,8 +23,20 @@ function Overlay() {
         ease: "power4.inOut",
         onComplete: () => setIsAnimating(false),
       });
+      setTimeout(() => {
+        setindex((prev) => (prev > 5 ? 0 : prev + 1));
+      }, 350);
     }
   }
+  const colorArr = [
+    "#89f480",
+    "#a2991f",
+    "#d7651dcd",
+    "#1fa2a0",
+    "#5c1fa2",
+    "#a21f74",
+    "#a21f1f",
+  ];
   return (
     <div className=" h-screen w-screen fixed  p-3 z-10 top-0 left-0 pointer-events-none">
       <div className="h-full w-full border-r border-[#404140] relative">
@@ -47,7 +59,9 @@ function Overlay() {
           <div className="">
             <h4 className="text-white relative left-5 text-[19px] monospace border-r-[1px] w-full whitespace-nowrap overflow-hidden  border-transparent ">
               subhajit
-              <span className="font-bold text-[#89f480]">&lt;ghosh&gt;</span>
+              <span className="font-bold " style={{ color: colorArr[index] }}>
+                &lt;ghosh&gt;
+              </span>
             </h4>
           </div>
           <div className=" flex gap-2 pr-2 ">

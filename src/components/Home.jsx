@@ -5,14 +5,14 @@ import Section2 from "./Section2";
 import Section3 from "./Section3";
 import Section4 from "./Section4";
 
-function Home() {
+function Home({ setindex, index }) {
   return (
     <div className="home opacity-0 w-full select-none hidden">
-      <Overlay />
-      <Section1 />
-      <Section2 />
-      <Section3/>
-      <Section4/>
+      <Overlay setindex={setindex} index={index}/>
+      <Section1 index={index} />
+      <Section2 index={index} />
+      <Section3 index={index} />
+      <Section4 index={index} />
     </div>
   );
 }

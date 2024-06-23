@@ -4,7 +4,16 @@ import DragBox2 from "./DragBox2";
 import DragBox3 from "./DragBox3";
 import DragBox4 from "./DragBox4";
 
-function Section3() {
+function Section3({ index }) {
+  const colorArr = [
+    "#89f480",
+    "#c0b623",
+    "#e36211cd",
+    "#1cbcb9",
+    "#7116d8",
+    "#bb1e84",
+    "#a21f1f",
+  ];
   const [zindex, setzindex] = useState([1, 2, 3, 4]);
   function setZ(cardIndex) {
     const currentMaxZ = Math.max(...zindex);
@@ -16,7 +25,7 @@ function Section3() {
   return (
     <div className="flex items-center justify-center flex-col py-[200px] gap-[2rem]">
       <h4 className="text-[70px] text-white tracking-[-5px] monospace">
-        Discover <span className="text-[#89f480]">me</span>
+        Discover <span style={{ color: colorArr[index] }}>me</span>
       </h4>
       <div
         id="dragContainer"
