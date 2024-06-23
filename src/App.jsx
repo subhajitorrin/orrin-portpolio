@@ -7,7 +7,7 @@ import Home from "./components/Home";
 import LocomotiveScroll from "locomotive-scroll";
 
 function App() {
-  const [progress, setProgress] = useState(0);
+  const [progress, setProgress] = useState(100);
   const locomotiveScroll = new LocomotiveScroll();
   useEffect(() => {
     const interval = setInterval(() => {

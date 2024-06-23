@@ -32,3 +32,40 @@ body {
 .nato {
   font-family: "Noto Serif", serif;
 }
+
+.arrow {
+  position: relative;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid transparent;
+  opacity: 1;
+}
+
+.arrow1 {
+  animation: arrowScroll 3s infinite cubic-bezier(0.23, 1, 0.32, 1);
+  animation-delay: 1.1s;
+}
+.arrow2 {
+  animation: arrowScroll 3s infinite cubic-bezier(0.23, 1, 0.32, 1);
+  animation-delay: 1.3s;
+}
+.arrow3 {
+  animation: arrowScroll 3s infinite cubic-bezier(0.23, 1, 0.32, 1);
+  animation-delay: 1.5s;
+}
+
+@keyframes arrowScroll {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}

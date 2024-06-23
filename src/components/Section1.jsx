@@ -1,19 +1,17 @@
-import React from "react";
+import gsap from "gsap";
+import React, { useEffect, useRef } from "react";
+import { IoIosArrowDown } from "react-icons/io";
 function Section1() {
   return (
     <div className=" h-screen w-full flex items-center justify-center flex-col gap-5 select-none ">
       <div className=" w-full h-[900px] absolute overflow-hidden flex  z-[1] top-[-20%]">
         <div className="infiniteScrollHz">
-          <h1
-            className="text-[50rem] whitespace-nowrap text-[#10110F] lilita opacity-[.2]"
-          >
+          <h1 className="text-[50rem] whitespace-nowrap text-[#10110F] lilita opacity-[.2]">
             subhajit
           </h1>
         </div>
         <div className="infiniteScrollHz">
-          <h1
-            className="text-[50rem] whitespace-nowrap text-[#10110F] lilita opacity-[.2]"
-          >
+          <h1 className="text-[50rem] whitespace-nowrap text-[#10110F] lilita opacity-[.2]">
             subhajit
           </h1>
         </div>
@@ -29,6 +27,17 @@ function Section1() {
           hic quis amet odio molestiae sit quos sed similique impedit ab
           incidunt rem.
         </p>
+        <div className="absolute bottom-[5rem] h-[150px]  text-white opacity-[.5]">
+          <div className="mt-[-1px] arrow arrow1">
+            <IoIosArrowDown className="text-[20px]" />
+          </div>
+          <div className="mt-[-1px] arrow arrow2">
+            <IoIosArrowDown className="text-[20px]" />
+          </div>
+          <div className="mt-[-1px] arrow arrow3">
+            <IoIosArrowDown className="text-[20px]" />
+          </div>
+        </div>
       </div>
     </div>
   );
