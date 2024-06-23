@@ -2,7 +2,7 @@ import gsap from "gsap";
 import React, { useRef } from "react";
 import { GoArrowUpRight } from "react-icons/go";
 
-function ProjectCard() {
+function ProjectCard({ title, skills, img, index, time,link }) {
   const projectCardImgRef = useRef(null);
   const projectCardLeft = useRef(null);
   const projectCounterRef = useRef(null);
@@ -76,42 +76,43 @@ function ProjectCard() {
     <div
       onMouseEnter={handleEnter}
       onMouseLeave={handleLeave}
+      onClick={() => { window.open(link, '_blank') }}
       className="w-[54%] h-[250px] border-[#727272] border rounded-[10px] flex  px-[1rem] cursor-pointer"
     >
       <div
         className="w-[5%] h-full   text-[#727272] flex items-center "
         ref={projectCounterRef}
       >
-        01
+        0{index + 1}
       </div>
       <div
         className="w-[40%] h-full  flex flex-col justify-center relative gap-2"
         ref={projectCardLeft}
       >
-        <h4 className="text-[40px] text-white">Project1 Heading</h4>
+        <h4 className="text-[40px] text-white">{title}</h4>
         <div className="flex gap-[10px] text-[#727272] text-[13px]">
-          <div className="rounded-[20px] border-[#727272] border px-4 py-1">
-            javascript
-          </div>
-          <div className="rounded-[20px] border-[#727272] border px-4 py-1">
-            python
-          </div>
-          <div className="rounded-[20px] border-[#727272] border px-4 py-1">
-            gsap
-          </div>
+          {skills.map((item, index) => {
+            return (
+              <div className="rounded-[20px] border-[#727272] border px-4 py-1">
+                {item}
+              </div>
+            );
+          })}
         </div>
       </div>
-      <div className="w-[50%] h-full  flex justify-center">
+      <div className="w-[50%] h-full  flex justify-center relative left-[-40px]">
         <div
           onMouseEnter={handelImgRotateEnter}
           onMouseLeave={handelImgRotateLeave}
           ref={projectCardImgRef}
-          className=" h-full w-[80%] border border-white scale-[.5] opacity-0 relative top-[-10px]"
-        ></div>
+          className="flex items-center h-full w-[80%]  scale-[.5] opacity-0 relative top-[-10px]"
+        >
+          <img src={img} className="scale-[1] rounded-[10px]" />
+        </div>
       </div>
       <div className="pr-4 relative w-[6%] h-full text-[#727272] flex items-center justify-end gap-2">
-        <span className="absolute right-0" ref={projectYearRef}>
-          2024
+        <span className="absolute right-0 " ref={projectYearRef}>
+          {time}
         </span>
         <div ref={projectArrowrRef} className="opacity-0 absolute right-0">
           <GoArrowUpRight
