@@ -10,6 +10,7 @@ function Dragbox3({ zindex, setZ }) {
       style={{ zIndex: zindex[2] }}
       className="rounded-[5px] overflow-hidden text-[20px] text-white h-[280px] w-[500px] absolute top-[350px] left-[1200px] border border-[#404140] "
     >
+      <div className="glass h-full w-full absolute"></div>
       <div className="h-[12%] bg-[#0f0f0f] border-b-[#404140] border-b w-full flex justify-between items-center px-4 opacity-[0.7]">
         <p className=" text-[15px] font-[500]">education</p>
         <div className=" flex gap-2">

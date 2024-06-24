@@ -1,17 +1,18 @@
 import React from "react";
 import useDragger from "./useDragger";
 
-function DragBox2({zindex,setZ}) {
+function DragBox2({ zindex, setZ }) {
   useDragger("dragBox2", "dragContainer");
   return (
     <div
-    onMouseDown={()=>setZ(1)}
+      onMouseDown={() => setZ(1)}
       id="dragBox2"
-      style={{zIndex:zindex[1]}}
-      className="rounded-[5px] overflow-hidden text-[20px] text-white h-[300px] w-[200px] absolute top-[300px] left-[500px] border border-[#404140] "
+      style={{ zIndex: zindex[1] }}
+      className="rounded-[5px] overflow-hidden text-[20px] text-white h-[250px] w-[200px] absolute top-[300px] left-[500px] border border-[#404140] "
     >
+      <div className="glass h-full w-full absolute"></div>
       <div className="h-[12%] bg-[#0f0f0f] border-b-[#404140] border-b w-full flex justify-between items-center px-4 opacity-[0.7]">
-        <p className=" text-[15px] font-[500]">web-dev</p>
+        <p className=" text-[15px] font-[500]">frontend</p>
         <div className=" flex gap-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"

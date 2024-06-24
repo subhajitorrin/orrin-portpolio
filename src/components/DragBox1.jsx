@@ -8,8 +8,9 @@ function DragBox1({ zindex, setZ }) {
       onMouseDown={() => setZ(0)}
       id="dragBox1"
       style={{ zIndex: zindex[0] }}
-      className="rounded-[5px] overflow-hidden text-[20px] text-white h-[200px] w-[200px] absolute top-[100px] left-[900px] border border-[#404140] "
+      className="rounded-[5px] overflow-hidden text-[20px] text-white h-[190px] w-[200px] absolute top-[100px] left-[900px] border border-[#404140] "
     >
+      <div className="glass h-full w-full absolute"></div>
       <div className="h-[12%] bg-[#0f0f0f] border-b-[#404140] border-b w-full flex justify-between items-center px-4 opacity-[0.7]">
         <p className=" text-[15px] font-[500]">languages</p>
         <div className=" flex gap-2">
