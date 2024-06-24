@@ -4,8 +4,9 @@ import { FaAngleLeft } from "react-icons/fa6";
 import p1 from "../asset/p1.jpg";
 import p2 from "../asset/p2.jpg";
 import p3 from "../asset/p3.jpg";
+import MobileProjectCard from "./MobileProjectCard";
 
-function Section2({ index }) {
+function Section2({ index, width }) {
   const colorArr = [
     "#89f480",
     "#c0b623",
@@ -40,21 +41,39 @@ function Section2({ index }) {
   ];
   return (
     <div className=" w-full flex items-center flex-col gap-[1rem] py-[2rem]">
-      <h4 className="text-[70px] text-white tracking-[-5px] monospace">
+      <h4
+        style={{ fontSize: width <= 768 ? "10vw" : "70px" }}
+        className=" text-white tracking-[-5px] monospace"
+      >
         Projects <span style={{ color: colorArr[index] }}>highlight</span>
       </h4>
       {projectData.map((item, index) => {
-        return (
-          <ProjectCard
-            title={item.heading}
-            skills={item.skills}
-            img={item.img}
-            index={index}
-            time={item.time}
-            link={item.link}
-          />
-        );
+        if (width > 768) {
+          return (
+            <ProjectCard
+              key={index}
+              title={item.heading}
+              skills={item.skills}
+              img={item.img}
+              index={index}
+              time={item.time}
+              link={item.link}
+            />
+          );
+        } else {
+          return (
+            <MobileProjectCard
+              key={index}
+              title={item.heading}
+              index={index}
+              link={item.link}
+              skills={item.skills}
+              img={item.img}
+            />
+          );
+        }
       })}
+
       {/* <div className="w-[54%] flex justify-center gap-[10rem]">
         <div className="cursor-pointer text-[#727272] rounded-full border border-[#727272] w-[40px] h-[40px] flex items-center justify-center">
           <FaAngleLeft />

@@ -2,7 +2,7 @@ import gsap from "gsap";
 import React, { useRef } from "react";
 import { GoArrowUpRight } from "react-icons/go";
 
-function ProjectCard({ title, skills, img, index, time,link }) {
+function ProjectCard({ title, skills, img, index, time, link }) {
   const projectCardImgRef = useRef(null);
   const projectCardLeft = useRef(null);
   const projectCounterRef = useRef(null);
@@ -76,7 +76,9 @@ function ProjectCard({ title, skills, img, index, time,link }) {
     <div
       onMouseEnter={handleEnter}
       onMouseLeave={handleLeave}
-      onClick={() => { window.open(link, '_blank') }}
+      onClick={() => {
+        window.open(link, "_blank");
+      }}
       className="w-[54%] h-[250px] border-[#727272] border rounded-[10px] flex  px-[1rem] cursor-pointer"
     >
       <div
