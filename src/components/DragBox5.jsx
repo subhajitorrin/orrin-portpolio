@@ -1,18 +1,18 @@
 import React from "react";
 import useDragger from "./useDragger";
 
-function DragBox2({ zindex, setZ }) {
-  useDragger("dragBox2", "dragContainer");
+function Dragbox5({ zindex, setZ }) {
+  useDragger("Dragbox5", "dragContainer");
   return (
     <div
-      onMouseDown={() => setZ(1)}
-      id="dragBox2"
-      style={{ zIndex: zindex[1] }}
-      className="rounded-[5px] overflow-hidden text-[20px] text-white h-[250px] w-[200px] absolute top-[293px] left-[332px] border border-[#404140] "
+      onMouseDown={() => setZ(4)}
+      id="Dragbox5"
+      style={{ zIndex: zindex[4] }}
+      className="rounded-[5px] overflow-hidden text-[20px] text-white h-[220px] w-[500px] absolute top-[60px] left-[194px] border border-[#404140] "
     >
       <div className="glass h-full w-full absolute"></div>
       <div className="h-[12%] bg-[#0f0f0f] border-b-[#404140] border-b w-full flex justify-between items-center px-4 opacity-[0.7]">
-        <p className=" text-[15px] font-[500]">frontend</p>
+        <p className=" text-[15px] font-[500]">summary</p>
         <div className=" flex gap-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -60,17 +60,17 @@ function DragBox2({ zindex, setZ }) {
           </span>
         </div>
       </div>
-      <div className="h-[88%] bg-[#0f0f0f] opacity-[0.5] w-full text-[18px] p-4 monospace">
-        <p>- Html</p>
-        <p>- Css</p>
-        <p>- Javascript</p>
-        <p>- Tailwind</p>
-        <p>- React</p>
-        <p>- Gsap</p>
-        <p>- Locomotive</p>
+      <div className="h-[88%] bg-[#0f0f0f] opacity-[0.7] w-full text-[18px] p-4 monospace">
+        <p>
+          I am <span className="text-[#89f480]">Subhajit Ghosh</span>, <br />
+          my goal is to <span className="text-[#00d5ff]">secure a position</span> as a <span className="text-[#c6ff28]">frontend</span> developer where I can
+          <span className="text-[#fb1dff]"> contribute my skills</span> and gain more <span className="text-[#ff6128]">knowledge</span>. In the long run, <span className="text-[#5dff27]">I
+          aspire to</span> become <span className="text-[#ff1869]">a full-stack developer</span>, continually <span className="text-[#2bd5ff]">evolving with</span> the
+          ever-changing <span className="text-[#b5ff2b]">tech landscape</span>.
+        </p>
       </div>
     </div>
   );
 }
 
-export default DragBox2;
+export default Dragbox5;

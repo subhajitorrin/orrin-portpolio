@@ -21,7 +21,7 @@ function Section2({ index }) {
       skills: ["React", "Razorpay"],
       img: p1,
       time: "2024",
-      link:"https://github.com/subhajitorrin/ecommerce.git"
+      link: "https://github.com/subhajitorrin/ecommerce.git",
     },
     {
       heading: "DSA Remainder",
@@ -35,7 +35,7 @@ function Section2({ index }) {
       skills: ["React", "Firebase"],
       img: p3,
       time: "2024",
-      link:"https://github.com/subhajitorrin/chatapp.git"
+      link: "https://github.com/subhajitorrin/chatapp.git",
     },
   ];
   return (

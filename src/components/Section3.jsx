@@ -3,6 +3,7 @@ import DragBox1 from "./DragBox1";
 import DragBox2 from "./DragBox2";
 import DragBox3 from "./DragBox3";
 import DragBox4 from "./DragBox4";
+import DragBox5 from "./DragBox5";
 
 function Section3({ index }) {
   const colorArr = [
@@ -14,7 +15,7 @@ function Section3({ index }) {
     "#bb1e84",
     "#a21f1f",
   ];
-  const [zindex, setzindex] = useState([1, 2, 3, 4]);
+  const [zindex, setzindex] = useState([1, 2, 3, 4, 5]);
   function setZ(cardIndex) {
     const currentMaxZ = Math.max(...zindex);
     let temp = [...zindex];
@@ -35,6 +36,7 @@ function Section3({ index }) {
         <DragBox2 zindex={zindex} setZ={setZ} />
         <DragBox3 zindex={zindex} setZ={setZ} />
         <DragBox4 zindex={zindex} setZ={setZ} />
+        <DragBox5 zindex={zindex} setZ={setZ} />
       </div>
     </div>
   );

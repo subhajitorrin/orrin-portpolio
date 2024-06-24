@@ -9,7 +9,7 @@ function DragBox4({ zindex, setZ }) {
       onMouseDown={() => setZ(3)}
       id="Dragbox4"
       style={{ zIndex: zindex[3] }}
-      className=" rounded-[5px] overflow-hidden text-[20px] text-white h-[300px]  absolute top-[100px] left-[1250px] border border-[#404140] "
+      className=" rounded-[5px] overflow-hidden text-[20px] text-white h-[300px]  absolute top-[125px] left-[1172px] border border-[#404140] "
     >
       <div className="h-[8%] bg-[#0f0f0f] border-b-[#404140] border-b w-full flex justify-between items-center px-4 opacity-[0.7]">
         <p className=" text-[15px] font-[500]">portrait</p>
