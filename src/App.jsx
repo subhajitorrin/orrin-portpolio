@@ -5,7 +5,7 @@ import Loader from "./components/Loader";
 import gsap from "gsap";
 import Home from "./components/Home";
 import LocomotiveScroll from "locomotive-scroll";
-
+// hehe
 function App() {
   const [progress, setProgress] = useState(0);
   const [index, setindex] = useState(0);
