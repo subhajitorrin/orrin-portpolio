@@ -1,7 +1,7 @@
 import gsap from "gsap";
 import React, { useEffect, useRef } from "react";
 import { IoIosArrowDown } from "react-icons/io";
-function Section1({ index }) {
+function Section1({ index, width }) {
   const colorArr = [
     "#89f480",
     "#c0b623",
@@ -26,16 +26,31 @@ function Section1({ index }) {
         </div>
       </div>
       <div className="flex items-center justify-center flex-col gap-5 z-[2]">
-        <h2 className="text-[100px] text-white leading-[5.5rem] text-center monospace">
-          Hi,i'm Subhajit,a <br />
-          <span style={{ color: colorArr[index] }}>frontend</span> developer
-        </h2>
-        <p className="text-[#727272]">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
-          doloribus corrupti rerum officiis aut. <br /> Sunt nostrum, pariatur,
-          hic quis amet odio molestiae sit quos sed similique impedit ab
-          incidunt rem.
-        </p>
+        {width > 768 ? (
+          <div className="flex items-center justify-center flex-col gap-5">
+            <h2 className="text-[100px] text-white leading-[5.5rem] text-center monospace">
+              Hi,i'm Subhajit,a <br />
+              <span style={{ color: colorArr[index] }}>frontend</span> developer
+            </h2>
+            <p className="text-[#727272]">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+              doloribus corrupti rerum officiis aut. <br /> Sunt nostrum,
+              pariatur, hic quis amet odio molestiae sit quos sed similique
+              impedit ab incidunt rem.
+            </p>
+          </div>
+        ) : (
+          <div className="flex items-center justify-center flex-col gap-5">
+            <h2 className="text-[10vw] text-white leading-[100%] text-center monospace">
+              Hi,i'm Subhajit,a <br />
+              <span style={{ color: colorArr[index] }}>frontend</span> developer
+            </h2>
+            <p className="text-[#727272] text-center w-[80%]">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+              doloribus corrupti rerum officiis aut.
+            </p>
+          </div>
+        )}
         <div className="absolute bottom-[5rem] h-[150px]  text-white opacity-[.5]">
           <div className="mt-[-1px] arrow arrow1">
             <IoIosArrowDown className="text-[20px]" />

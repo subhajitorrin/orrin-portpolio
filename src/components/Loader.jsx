@@ -2,7 +2,7 @@ import gsap from "gsap";
 import React, { useEffect, useRef } from "react";
 import { PuffLoader } from "react-spinners";
 
-function Loader({ progress }) {
+function Loader({ progress, width }) {
   const typewriterRef = useRef(null);
   useEffect(() => {
     const t1 = gsap.timeline();
@@ -20,13 +20,20 @@ function Loader({ progress }) {
       },
       0.8
     );
-    t1.to(typewriterRef.current, {
-      borderRightColor: "transparent",
-    },1.6);
+    t1.to(
+      typewriterRef.current,
+      {
+        borderRightColor: "transparent",
+      },
+      1.6
+    );
   }, []);
   return (
-    <div className=" loaderOverlay h-screen  w-full flex flex-col justify-center items-center pointer-events-none">
-      <div className="w-[500px] h-[40px] border-[1px] border-[#404140] rounded-[5px] flex 0 ">
+    <div className="h-screen loaderOverlay w-full flex flex-col justify-center items-center pointer-events-none ">
+      <div
+        style={{ width: width <= 768 ? "90%" : "500px" }}
+        className=" h-[40px] border-[1px] border-[#404140] rounded-[5px] flex 0 "
+      >
         <div className="h-full w-[8%] flex items-center justify-center">
           <svg
             width="28"
@@ -57,7 +64,7 @@ function Loader({ progress }) {
           <PuffLoader color="#89f480" size={30} speedMultiplier={0.9} />
         </div>
       </div>
-      <div className="w-[500px] absolute flex flex-col gap-0 bottom-[100px]">
+      <div className="flex flex-col gap-0 absolute bottom-[20%] ">
         <p className="text-[#8af480a3] text-center nato text-[30px]">
           {progress}%
         </p>
