@@ -87,7 +87,7 @@ function App() {
         </span>
       </div>
       <Loader progress={progress} width={width} />
-      <Home setindex={setindex} index={index} width={width}/>
+      <Home setindex={setindex} index={index} width={width} />
     </div>
   );
 }

@@ -3,7 +3,7 @@ import { RiExternalLinkLine } from "react-icons/ri";
 
 function MobileProjectCard({ title, index, link, skills, img }) {
   return (
-    <div className="w-[90%] h-[300px] border rounded-[7px] px-[1rem] monospace flex flex-col justify-evenly">
+    <div className="w-[90%] h-[300px] border-[#404140] border rounded-[7px] px-[1rem] monospace flex flex-col justify-evenly">
       <div className="">
         <div className="flex justify-between items-center">
           <div className="text-[#727272] text-[.8rem]">0{index + 1}</div>

@@ -31,8 +31,12 @@ function Loader({ progress, width }) {
   return (
     <div className="h-screen loaderOverlay w-full flex flex-col justify-center items-center pointer-events-none ">
       <div
-        style={{ width: width <= 768 ? "90%" : "500px" }}
-        className=" h-[40px] border-[1px] border-[#404140] rounded-[5px] flex 0 "
+        style={{
+          width: width <= 768 ? "90%" : "500px",
+          top: width <= 768 ? "-5rem" : "",
+          borderColor: width <= 768 ? "#404140ba" : "#404140",
+        }}
+        className=" h-[40px] border-[1px] rounded-[5px] flex 0 relative"
       >
         <div className="h-full w-[8%] flex items-center justify-center">
           <svg

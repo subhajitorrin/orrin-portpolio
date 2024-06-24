@@ -10,11 +10,11 @@ function Home({ setindex, index, width }) {
   return (
     <div className="home opacity-0 w-full select-none hidden">
       {width > 768 && <Overlay setindex={setindex} index={index} />}
-      <Section1 index={index} width={width}/>
-      <Section2 index={index} width={width}/>
+      <Section1 index={index} width={width} />
+      <Section2 index={index} width={width} />
       <Section3 index={index} />
-      <Section5 index={index} />
-      {/* <Section4 index={index} /> */}
+      <Section5 index={index} width={width} />
+      {width > 768 && <Section4 index={index} />}
     </div>
   );
 }
