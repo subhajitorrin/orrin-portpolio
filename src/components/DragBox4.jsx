@@ -9,10 +9,10 @@ function DragBox4({ zindex, setZ }) {
       onMouseDown={() => setZ(3)}
       id="Dragbox4"
       style={{ zIndex: zindex[3] }}
-      className=" rounded-[5px] overflow-hidden text-[20px] text-white h-[400px] w-[350px] absolute top-[100px] left-[1250px] border border-[#404140] "
+      className=" rounded-[5px] overflow-hidden text-[20px] text-white h-[300px]  absolute top-[100px] left-[1250px] border border-[#404140] "
     >
       <div className="h-[8%] bg-[#0f0f0f] border-b-[#404140] border-b w-full flex justify-between items-center px-4 opacity-[0.7]">
-        <p className=" text-[15px] font-[500]">myself</p>
+        <p className=" text-[15px] font-[500]">portrait</p>
         <div className=" flex gap-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -60,9 +60,7 @@ function DragBox4({ zindex, setZ }) {
           </span>
         </div>
       </div>
-      <div className="overflow-hidden  h-[88%] bg-[#0f0f0f] opacity-[1] w-full text-[18px] p-4 monospace pointer-events-none">
-        <img src={me} className="h-full scale-[1]" />
-      </div>
+      <img src={me} className="h-full scale-[1] pointer-events-none" />
     </div>
   );
 }

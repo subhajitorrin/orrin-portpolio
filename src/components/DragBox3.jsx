@@ -1,17 +1,17 @@
 import React from "react";
 import useDragger from "./useDragger";
 
-function Dragbox3({zindex,setZ}) {
+function Dragbox3({ zindex, setZ }) {
   useDragger("Dragbox3", "dragContainer");
   return (
     <div
-    onMouseDown={()=>setZ(2)}
+      onMouseDown={() => setZ(2)}
       id="Dragbox3"
-      style={{zIndex:zindex[2]}}
-      className="rounded-[5px] overflow-hidden text-[20px] text-white h-[200px] w-[350px] absolute top-[350px] left-[1200px] border border-[#404140] "
+      style={{ zIndex: zindex[2] }}
+      className="rounded-[5px] overflow-hidden text-[20px] text-white h-[280px] w-[500px] absolute top-[350px] left-[1200px] border border-[#404140] "
     >
       <div className="h-[12%] bg-[#0f0f0f] border-b-[#404140] border-b w-full flex justify-between items-center px-4 opacity-[0.7]">
-        <p className=" text-[15px] font-[500]">skills</p>
+        <p className=" text-[15px] font-[500]">education</p>
         <div className=" flex gap-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -60,11 +60,14 @@ function Dragbox3({zindex,setZ}) {
         </div>
       </div>
       <div className="h-[88%] bg-[#0f0f0f] opacity-[0.5] w-full text-[18px] p-4 monospace">
+        <p>Bachelor Of Computer Application (BCA), 2025</p>
+        <p>from Dr. B. C. Roy Engineering College, Durgapur</p>
+        <br />
+        <p>Relevant Coursework</p>
         <p>- Data Structure & Algorithm</p>
         <p>- Object Oriented Programming</p>
         <p>- Database Management System</p>
         <p>- Operating System</p>
-        <p>- Version Control</p>
       </div>
     </div>
   );
