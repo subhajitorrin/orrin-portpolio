@@ -111,24 +111,33 @@ function Overlay({ setindex, index }) {
             </span>
           </div>
         </div>
-        <div className="absolute bottom-0 w-full h-[40px] border-t border-b border-[#404140] flex justify-end items-center">
-          <div
-            onClick={handelSpin}
-            className="text-white opacity-[.5] text-[12px] border px-[1rem] py-[2px] rounded-[10px] cursor-pointer pointer-events-auto flex gap-[5px]"
-          >
-            Theme{" "}
-            <span
-              ref={spinRef}
-              style={{ pointerEvents: isAnimating ? "none" : "auto" }}
-            >
-              <MdAutorenew className="text-[18px]" />
-            </span>
+        <div className="absolute bottom-0 w-full h-[40px] border-t border-b border-[#404140] flex justify-between items-center">
+          <div className="text-white monospace flex gap-[10px] items-center ml-[60px] opacity-[.7] text-[.9rem]">
+            <div
+              className="h-[10px] w-[10px] rounded-[50%] "
+              style={{ backgroundColor: colorArr[index] }}
+            ></div>{" "}
+            Online
           </div>
-          <div className="text-white opacity-[.5] flex gap-[1rem] pointer-events-auto px-[2rem]">
-            <FaGithub className="cursor-pointer" />
-            <FaXTwitter className="cursor-pointer" />
-            <BsInstagram className="cursor-pointer" />
-            <FaLinkedin className="cursor-pointer" />
+          <div className="flex items-center">
+            <div
+              onClick={handelSpin}
+              className="text-white opacity-[.5] text-[12px] border px-[1rem] py-[2px] rounded-[10px] cursor-pointer pointer-events-auto flex gap-[5px]"
+            >
+              Theme{" "}
+              <span
+                ref={spinRef}
+                style={{ pointerEvents: isAnimating ? "none" : "auto" }}
+              >
+                <MdAutorenew className="text-[18px]" />
+              </span>
+            </div>
+            <div className="text-white opacity-[.5] flex gap-[1rem] pointer-events-auto px-[2rem]">
+              <FaGithub className="cursor-pointer" />
+              <FaXTwitter className="cursor-pointer" />
+              <BsInstagram className="cursor-pointer" />
+              <FaLinkedin className="cursor-pointer" />
+            </div>
           </div>
         </div>
         <div className="absolute left-0 h-full w-[40px] border border-[#404140] text-white flex items-center flex-col justify-center gap-[2rem]">

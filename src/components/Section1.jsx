@@ -28,7 +28,7 @@ function Section1({ index }) {
       <div className="flex items-center justify-center flex-col gap-5 z-[2]">
         <h2 className="text-[100px] text-white leading-[5.5rem] text-center monospace">
           Hi,i'm Subhajit,a <br />
-          <span style={{color:colorArr[index]}}>frontend</span> developer
+          <span style={{ color: colorArr[index] }}>frontend</span> developer
         </h2>
         <p className="text-[#727272]">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
