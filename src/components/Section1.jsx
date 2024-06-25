@@ -52,7 +52,7 @@ function Section1({ index, width }) {
         {width > 768 ? (
           <div className="flex items-center justify-center flex-col gap-5">
             <h2 className="text-[100px] text-white leading-[5.5rem] text-center monospace">
-              Hi, I'm Subhajit, a <br />
+              Hi,I'm Subhajit,a <br />
               <span style={{ color: colorArr[index] }}>frontend</span> developer
             </h2>
             <p className="text-[#727272]">
@@ -75,7 +75,7 @@ function Section1({ index, width }) {
             className="flex items-center justify-center flex-col gap-5"
           >
             <h2 className="text-[10vw] text-white leading-[100%] text-center monospace">
-              Hi, I'm Subhajit, a <br />
+              Hi,I'm Subhajit,a <br />
               <span style={{ color: colorArr[index] }}>frontend</span> developer
             </h2>
             <p className="text-[#727272] text-center w-[80%]">
