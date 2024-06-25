@@ -21,6 +21,7 @@ function Section5({ index, width }) {
     "#c0b623",
     "#e36211cd",
     "#1cbcb9",
+    "#39a82d",
     "#7116d8",
     "#bb1e84",
     "#a21f1f",

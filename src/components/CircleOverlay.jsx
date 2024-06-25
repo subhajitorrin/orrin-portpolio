@@ -6,6 +6,7 @@ function CircleOverlay({ index }) {
     "#a2991f",
     "#d7651dcd",
     "#1fa2a0",
+    "#39a82d",
     "#5c1fa2",
     "#a21f74",
     "#a21f1f",

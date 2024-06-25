@@ -24,7 +24,7 @@ function Overlay({ setindex, index }) {
         onComplete: () => setIsAnimating(false),
       });
       setTimeout(() => {
-        setindex((prev) => (prev > 5 ? 0 : prev + 1));
+        setindex((prev) => (prev > 6 ? 0 : prev + 1));
       }, 350);
     }
   }
@@ -33,6 +33,7 @@ function Overlay({ setindex, index }) {
     "#a2991f",
     "#d7651dcd",
     "#1fa2a0",
+    "#39a82d",
     "#5c1fa2",
     "#a21f74",
     "#a21f1f",
