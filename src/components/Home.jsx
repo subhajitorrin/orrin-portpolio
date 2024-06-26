@@ -21,7 +21,7 @@ function Home({ setindex, index, width }) {
       <Section2 index={index} width={width} />
       <Section3 index={index} width={width} />
       <Section5 index={index} width={width} />
-      {width > 768 && <Section4 index={index} />}
+      <Section4 index={index} width={width} />
     </div>
   );
 }

@@ -181,17 +181,21 @@ function Section5({ index, width }) {
             {techList.map((item, index) => {
               return item.icon ? (
                 <div className="h-[80px] flex flex-col opacity-[.5]">
-                  <div className="text-[3rem] flex justify-center">
+                  <div className="text-[2.5rem] flex justify-center">
                     {item.icon}
                   </div>
-                  <p className="monospace text-center">{item.text}</p>
+                  <p className="monospace text-center text-[1rem]">
+                    {item.text}
+                  </p>
                 </div>
               ) : (
                 <div className="h-[80px] flex flex-col opacity-[.5]">
-                  <div className="text-[3rem] flex justify-center ">
-                    <img src={item.logo} className="invert-[1] h-[50px]" />
+                  <div className="flex justify-center ">
+                    <img src={item.logo} className="invert-[1] h-[40px]" />
                   </div>
-                  <p className="monospace text-center">{item.text}</p>
+                  <p className="monospace text-center text-[1rem] ">
+                    {item.text}
+                  </p>
                 </div>
               );
             })}
