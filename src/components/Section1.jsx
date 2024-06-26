@@ -4,7 +4,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import { TbCopy } from "react-icons/tb";
 import { TbCopyCheck } from "react-icons/tb";
 
-function Section1({ index, width }) {
+function Section1({ index, width, section1Ref }) {
   const [isCopied, setIsCopied] = useState(false);
   const colorArr = [
     "#89f480",
@@ -35,7 +35,10 @@ function Section1({ index, width }) {
   }
 
   return (
-    <div className="h-screen w-full flex items-center justify-center flex-col gap-5 select-none">
+    <div
+      ref={section1Ref}
+      className="h-screen w-full flex items-center justify-center flex-col gap-5 select-none"
+    >
       <div className="w-full h-[900px] absolute overflow-hidden flex z-[1] top-[-20%]">
         <div className="infiniteScrollHz">
           <h1 className="text-[50rem] whitespace-nowrap text-[#10110F] lilita opacity-[.2]">

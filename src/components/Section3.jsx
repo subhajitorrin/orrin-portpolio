@@ -4,8 +4,9 @@ import DragBox2 from "./DragBox2";
 import DragBox3 from "./DragBox3";
 import DragBox4 from "./DragBox4";
 import DragBox5 from "./DragBox5";
+import MobileSection3Inner from "./MobileSection3Inner";
 
-function Section3({ index }) {
+function Section3({ index, width }) {
   const colorArr = [
     "#89f480",
     "#c0b623",
@@ -24,23 +25,40 @@ function Section3({ index }) {
     temp[cardIndex] = currentMaxZ + 1;
     setzindex(temp);
   }
-  return (
-    <div className="flex items-center justify-center flex-col py-[200px] gap-[2rem]">
-      <h4 className="text-[70px] text-white tracking-[-5px] monospace">
-        Discover <span style={{ color: colorArr[index] }}>me</span>
-      </h4>
-      <div
-        id="dragContainer"
-        className="h-[650px] w-[90%] relative overflow-hidden"
-      >
-        <DragBox1 zindex={zindex} setZ={setZ} />
-        <DragBox2 zindex={zindex} setZ={setZ} />
-        <DragBox3 zindex={zindex} setZ={setZ} />
-        <DragBox4 zindex={zindex} setZ={setZ} />
-        <DragBox5 zindex={zindex} setZ={setZ} />
+
+  if (width > 768) {
+    return (
+      <div className="flex items-center justify-center flex-col py-[200px] gap-[2rem]">
+        <h4 className="text-[70px] text-white tracking-[-5px] monospace">
+          Discover <span style={{ color: colorArr[index] }}>me</span>
+        </h4>
+        <div
+          id="dragContainer"
+          className="h-[650px] w-[90%] relative overflow-hidden"
+        >
+          <DragBox1 zindex={zindex} setZ={setZ} />
+          <DragBox2 zindex={zindex} setZ={setZ} />
+          <DragBox3 zindex={zindex} setZ={setZ} />
+          <DragBox4 zindex={zindex} setZ={setZ} />
+          <DragBox5 zindex={zindex} setZ={setZ} />
+        </div>
       </div>
-    </div>
-  );
+    );
+  } else {
+    return (
+      <div className="flex items-center justify-center flex-col py-[200px] gap-[2rem]">
+        <h4
+          style={{ fontSize: width > 768 ? "70px" : "10vw" }}
+          className=" text-white tracking-[-5px] monospace"
+        >
+          Discover <span style={{ color: colorArr[index] }}>me</span>
+        </h4>
+        <div className="">
+          <MobileSection3Inner/>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default Section3;

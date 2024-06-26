@@ -10,7 +10,7 @@ import { GoMail } from "react-icons/go";
 import { MdAutorenew } from "react-icons/md";
 import gsap from "gsap";
 
-function Overlay({ setindex, index }) {
+function Overlay({ setindex, index, section1Ref }) {
   const spinRef = useRef(null);
   const [isAnimating, setIsAnimating] = useState(false);
   function handelSpin() {
@@ -38,6 +38,11 @@ function Overlay({ setindex, index }) {
     "#a21f74",
     "#a21f1f",
   ];
+  function handelScroll1() {
+    if (section1Ref.current) {
+      section1Ref.current?.scrollIntoView({ behavior: "smooth" });
+    }
+  }
   return (
     <div className=" h-screen w-screen fixed  p-3 z-10 top-0 left-0 pointer-events-none">
       <div className="h-full w-full border-r border-[#404140] relative">
@@ -142,7 +147,10 @@ function Overlay({ setindex, index }) {
           </div>
         </div>
         <div className="absolute left-0 h-full w-[40px] border border-[#404140] text-white flex items-center flex-col justify-center gap-[2rem]">
-          <FaHome className="cursor-pointer pointer-events-auto opacity-[.5]" />
+          <FaHome
+            className="cursor-pointer pointer-events-auto opacity-[.5]"
+            onClick={handelScroll1}
+          />
           <TbBrandSuperhuman className="cursor-pointer pointer-events-auto opacity-[.5]" />
           <RiContactsLine className="cursor-pointer pointer-events-auto opacity-[.5]" />
           <GoMail className="cursor-pointer pointer-events-auto opacity-[.5]" />
