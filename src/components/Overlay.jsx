@@ -11,8 +11,17 @@ import { MdAutorenew } from "react-icons/md";
 import gsap from "gsap";
 import { PiFilePdfDuotone } from "react-icons/pi";
 import resumeFile from "../asset/SUBHAJIT GHOSH RESUME.pdf";
+import { FaReact } from "react-icons/fa";
 
-function Overlay({ setindex, index, section1Ref }) {
+function Overlay({
+  setindex,
+  index,
+  section1Ref,
+  section2Ref,
+  section3Ref,
+  section4Ref,
+  section5Ref,
+}) {
   const spinRef = useRef(null);
   const [isAnimating, setIsAnimating] = useState(false);
   function handelSpin() {
@@ -40,11 +49,7 @@ function Overlay({ setindex, index, section1Ref }) {
     "#a21f74",
     "#a21f1f",
   ];
-  function handelScroll1() {
-    if (section1Ref.current) {
-      section1Ref.current?.scrollIntoView({ behavior: "smooth" });
-    }
-  }
+
   const handleDownloadResume = () => {
     const link = document.createElement("a");
     link.href = resumeFile;
@@ -171,11 +176,34 @@ function Overlay({ setindex, index, section1Ref }) {
         <div className="absolute left-0 h-full w-[40px] border border-[#404140] text-white flex items-center flex-col justify-center gap-[2rem]">
           <FaHome
             className="cursor-pointer pointer-events-auto opacity-[.5]"
-            onClick={handelScroll1}
+            onClick={() => {
+              section1Ref.current?.scrollIntoView({ behavior: "smooth" });
+            }}
           />
-          <TbBrandSuperhuman className="cursor-pointer pointer-events-auto opacity-[.5]" />
-          <RiContactsLine className="cursor-pointer pointer-events-auto opacity-[.5]" />
-          <GoMail className="cursor-pointer pointer-events-auto opacity-[.5]" />
+          <TbBrandSuperhuman
+            className="cursor-pointer pointer-events-auto opacity-[.5]"
+            onClick={() => {
+              section2Ref.current?.scrollIntoView({ behavior: "smooth" });
+            }}
+          />
+          <RiContactsLine
+            className="cursor-pointer pointer-events-auto opacity-[.5]"
+            onClick={() => {
+              section3Ref.current?.scrollIntoView({ behavior: "smooth" });
+            }}
+          />
+          <FaReact
+            className="cursor-pointer pointer-events-auto opacity-[.5]"
+            onClick={() => {
+              section5Ref.current?.scrollIntoView({ behavior: "smooth" });
+            }}
+          />
+          <GoMail
+            className="cursor-pointer pointer-events-auto opacity-[.5]"
+            onClick={() => {
+              section4Ref.current?.scrollIntoView({ behavior: "smooth" });
+            }}
+          />
         </div>
       </div>
     </div>

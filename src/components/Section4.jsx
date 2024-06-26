@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-function Section4({ width }) {
+function Section4({ width ,section4Ref}) {
   const [currentTime, setCurrentTime] = useState(new Date());
 
   useEffect(() => {
@@ -18,7 +18,7 @@ function Section4({ width }) {
   });
   if (width > 768) {
     return (
-      <div className=" w-full flex items-end justify-center">
+      <div ref={section4Ref} className=" w-full flex items-end justify-center">
         <div className="py-[3rem] px-[10rem] flex-col gap-[4rem] flex items-center justify-center mb-[5rem] h-[450px] w-[80%] border border-[#404140] rounded-[10px]">
           <div className="w-full h-[60%] flex justify-between items-center">
             <div className="text-white text-[50px] w-[40%] leading-[90%] monospace">

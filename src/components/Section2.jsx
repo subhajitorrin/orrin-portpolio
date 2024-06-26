@@ -6,7 +6,7 @@ import p2 from "../asset/p2.jpg";
 import p3 from "../asset/p3.jpg";
 import MobileProjectCard from "./MobileProjectCard";
 
-function Section2({ index, width }) {
+function Section2({ index, width,section2Ref }) {
   const colorArr = [
     "#89f480",
     "#c0b623",
@@ -41,7 +41,7 @@ function Section2({ index, width }) {
     },
   ];
   return (
-    <div className=" w-full flex items-center flex-col gap-[1rem] py-[2rem]">
+    <div ref={section2Ref} className=" w-full flex items-center flex-col gap-[1rem] py-[2rem]">
       <h4
         style={{ fontSize: width <= 768 ? "10vw" : "70px" }}
         className=" text-white tracking-[-5px] monospace"

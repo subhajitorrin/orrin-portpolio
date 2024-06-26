@@ -15,7 +15,7 @@ import { IoLogoVercel } from "react-icons/io5";
 import { VscVscode } from "react-icons/vsc";
 import { SiPostman } from "react-icons/si";
 
-function Section5({ index, width }) {
+function Section5({ index, width,section5Ref }) {
   const colorArr = [
     "#89f480",
     "#c0b623",
@@ -45,6 +45,7 @@ function Section5({ index, width }) {
   ];
   return (
     <div
+    ref={section5Ref}
       style={{ gap: width > 768 ? "10rem" : "3rem" }}
       className="h-screen  mb-[15rem] flex items-center justify-center flex-col "
     >

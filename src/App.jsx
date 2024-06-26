@@ -5,12 +5,12 @@ import Loader from "./components/Loader";
 import gsap from "gsap";
 import Home from "./components/Home";
 import LocomotiveScroll from "locomotive-scroll";
-// hehe
+
 function App() {
   const [width, setwidth] = useState(window.innerWidth);
   const [progress, setProgress] = useState(0);
   const [index, setindex] = useState(0);
-  const locomotiveScroll = new LocomotiveScroll();
+  // const locomotiveScroll = new LocomotiveScroll();
   useEffect(() => {
     const interval = setInterval(() => {
       setProgress((prev) => {

@@ -15,13 +15,21 @@ function Home({ setindex, index, width }) {
   return (
     <div className="home opacity-0 w-full select-none hidden">
       {width > 768 && (
-        <Overlay setindex={setindex} index={index} section1Ref={section1Ref} />
+        <Overlay
+          setindex={setindex}
+          index={index}
+          section1Ref={section1Ref}
+          section2Ref={section2Ref}
+          section3Ref={section3Ref}
+          section4Ref={section4Ref}
+          section5Ref={section5Ref}
+        />
       )}
       <Section1 index={index} width={width} section1Ref={section1Ref} />
-      <Section2 index={index} width={width} />
-      <Section3 index={index} width={width} />
-      <Section5 index={index} width={width} />
-      <Section4 index={index} width={width} />
+      <Section2 index={index} width={width} section2Ref={section2Ref} />
+      <Section3 index={index} width={width} section3Ref={section3Ref} />
+      <Section5 index={index} width={width} section5Ref={section5Ref} />
+      <Section4 index={index} width={width} section4Ref={section4Ref} />
     </div>
   );
 }

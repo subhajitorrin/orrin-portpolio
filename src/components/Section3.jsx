@@ -6,7 +6,7 @@ import DragBox4 from "./DragBox4";
 import DragBox5 from "./DragBox5";
 import MobileSection3Inner from "./MobileSection3Inner";
 
-function Section3({ index, width }) {
+function Section3({ index, width, section3Ref }) {
   const colorArr = [
     "#89f480",
     "#c0b623",
@@ -28,7 +28,10 @@ function Section3({ index, width }) {
 
   if (width > 768) {
     return (
-      <div className="flex items-center justify-center flex-col py-[200px] gap-[2rem]">
+      <div
+        ref={section3Ref}
+        className="flex items-center justify-center flex-col py-[100px] my-[100px] gap-[2rem]"
+      >
         <h4 className="text-[70px] text-white tracking-[-5px] monospace">
           Discover <span style={{ color: colorArr[index] }}>me</span>
         </h4>
@@ -54,7 +57,7 @@ function Section3({ index, width }) {
           Discover <span style={{ color: colorArr[index] }}>me</span>
         </h4>
         <div className="">
-          <MobileSection3Inner/>
+          <MobileSection3Inner />
         </div>
       </div>
     );
