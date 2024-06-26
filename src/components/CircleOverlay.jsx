@@ -2,7 +2,7 @@ import React from "react";
 
 function CircleOverlay({ index }) {
   const colorArr = [
-    "#385D34",
+    "#3b7234",
     "#a2991f",
     "#d7651dcd",
     "#1fa2a0",

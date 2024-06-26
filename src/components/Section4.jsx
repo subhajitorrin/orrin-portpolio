@@ -80,7 +80,7 @@ function Section4({ width }) {
     );
   } else {
     return (
-      <div className=" w-full flex justify-center mb-[1rem] ">
+      <div className=" w-full flex justify-center mb-[1rem] mt-[-10rem]">
         <div className="gap-[2rem] flex-col flex w-[90%] border border-[#404140] rounded-[10px] p-[2rem] monospace">
           <p className="text-white text-[5vw] leading-[90%] text-center">
             Let's create something great together
@@ -94,7 +94,7 @@ function Section4({ width }) {
             </p>
           </div>
           <div className="w-full border-t border-t-[#404140] flex justify-between items-center pt-[1rem]">
-            <div className="text-white flex gap-[4rem]">
+            <div className="text-white flex  flex-wrap justify-between w-full">
               <p className="cursor-pointer transition-all duration-300 ease-linear opacity-[.5] hover:opacity-[1]">
                 Linkedin
               </p>
