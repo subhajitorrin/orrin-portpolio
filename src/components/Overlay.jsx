@@ -9,6 +9,8 @@ import { RiContactsLine } from "react-icons/ri";
 import { GoMail } from "react-icons/go";
 import { MdAutorenew } from "react-icons/md";
 import gsap from "gsap";
+import { PiFilePdfDuotone } from "react-icons/pi";
+import resumeFile from "../asset/SUBHAJIT GHOSH RESUME.pdf";
 
 function Overlay({ setindex, index, section1Ref }) {
   const spinRef = useRef(null);
@@ -43,8 +45,19 @@ function Overlay({ setindex, index, section1Ref }) {
       section1Ref.current?.scrollIntoView({ behavior: "smooth" });
     }
   }
+  const handleDownloadResume = () => {
+    const link = document.createElement("a");
+    link.href = resumeFile;
+    link.download = "SUBHAJIT GHOSH RESUME.pdf";
+
+    document.body.appendChild(link);
+
+    link.click();
+
+    document.body.removeChild(link);
+  };
   return (
-    <div className=" h-screen w-screen fixed  p-3 z-10 top-0 left-0 pointer-events-none">
+    <div className=" h-screen w-screen fixed  p-3 z-[99999999999999999999] top-0 left-0 pointer-events-none">
       <div className="h-full w-full border-r border-[#404140] relative">
         <div className=" absolute w-full h-[40px] border-t border-b border-[#404140] flex justify-between items-center">
           <div className="pl-2 pr-2">
@@ -126,6 +139,15 @@ function Overlay({ setindex, index, section1Ref }) {
             Online
           </div>
           <div className="flex items-center">
+            <div
+              onClick={handleDownloadResume}
+              className="text-white mr-[1.2rem] opacity-[.5] text-[12px] border px-[1rem] py-[2px] rounded-[10px] cursor-pointer pointer-events-auto flex gap-[5px]"
+            >
+              Resume{" "}
+              <span>
+                <PiFilePdfDuotone className="text-[18px]" />
+              </span>
+            </div>
             <div
               onClick={handelSpin}
               className="text-white opacity-[.5] text-[12px] border px-[1rem] py-[2px] rounded-[10px] cursor-pointer pointer-events-auto flex gap-[5px]"

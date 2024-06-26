@@ -34,7 +34,7 @@ function Loader({ progress, width }) {
         style={{
           width: width <= 768 ? "90%" : "500px",
           top: width <= 768 ? "-5rem" : "",
-          borderColor: width <= 768 ? "#404140ba" : "#404140",
+          borderColor: width <= 768 ? "#afb4afad" : "#afb4afad",
         }}
         className=" h-[40px] border-[1px] rounded-[5px] flex 0 relative"
       >
@@ -53,7 +53,10 @@ function Loader({ progress, width }) {
             />
           </svg>
         </div>
-        <div className="h-full w-[84%] border-l-[1px] border-r-[1px] border-[#404140] flex items-center justify-center">
+        <div
+          style={{ borderColor: width <= 768 ? "#afb4afad" : "#afb4afad" }}
+          className="h-full w-[84%] border-l-[1px] border-r-[1px] flex items-center justify-center"
+        >
           <div className="">
             <h4
               className="text-white  text-[17px] monospace border-r-[1px] w-0 whitespace-nowrap overflow-hidden  border-transparent "
