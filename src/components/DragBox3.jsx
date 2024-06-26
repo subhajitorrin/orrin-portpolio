@@ -60,15 +60,36 @@ function Dragbox3({ zindex, setZ }) {
           </span>
         </div>
       </div>
-      <div className="h-[88%] bg-[#0f0f0f] opacity-[0.5] w-full text-[18px] p-4 monospace">
-        <p>Bachelor Of Computer Application (BCA), 2025</p>
-        <p>from Dr. B. C. Roy Engineering College, Durgapur</p>
+      <div className="h-[88%] bg-[#0f0f0f] opacity-[0.7] w-full text-[18px] p-4 monospace">
+        <p>
+          <span className="text-[#89f480]">
+            Bachelor Of Computer Application (BCA)
+          </span>
+          , <span className="text-[#00d5ff]">2025</span>
+        </p>
+        <p>
+          from{" "}
+          <span className="text-[#c6ff28]">
+            Dr. B. C. Roy Engineering College
+          </span>
+          , <span className="">Durgapur</span>
+        </p>
         <br />
-        <p>Relevant Coursework</p>
-        <p>- Data Structure & Algorithm</p>
-        <p>- Object Oriented Programming</p>
-        <p>- Database Management System</p>
-        <p>- Operating System</p>
+        <p>
+          <span className="text-[#ff6128]">Relevant Coursework</span>
+        </p>
+        <p>
+          <span className="text-[#5dff27]">- Data Structure & Algorithm</span>
+        </p>
+        <p>
+          <span className="text-[#ff1869]">- Object Oriented Programming</span>
+        </p>
+        <p>
+          <span className="text-[#2bd5ff]">- Database Management System</span>
+        </p>
+        <p>
+          <span className="text-[#ff28ff]">- Operating System</span>
+        </p>
       </div>
     </div>
   );

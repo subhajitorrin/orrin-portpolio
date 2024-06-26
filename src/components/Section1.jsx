@@ -91,7 +91,10 @@ function Section1({ index, width, section1Ref }) {
             </div>
           </div>
         )}
-        <div className="absolute bottom-[5rem] h-[150px] text-white opacity-[.5]">
+        <div
+          style={{ bottom: width > 768 ? "5rem" : "1rem" }}
+          className="absolute  h-[150px] text-white opacity-[.5]"
+        >
           <div className="mt-[-1px] arrow arrow1">
             <IoIosArrowDown className="text-[20px]" />
           </div>
